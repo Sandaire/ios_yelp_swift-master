@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gIH-yc-cs9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S99-IX-nzK">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -92,7 +92,7 @@
                                             <outlet property="ratingImageView" destination="2Zz-oW-AMv" id="FoI-4R-vWd"/>
                                             <outlet property="reviewsCountLabel" destination="EJu-JS-hqU" id="bYY-NC-Cb1"/>
                                             <outlet property="thumbImageView" destination="eAo-Y3-pin" id="VJE-2u-cMG"/>
-                                            <segue destination="hQo-xn-gRO" kind="showDetail" identifier="vcDetails" id="som-vD-8kD"/>
+                                            <segue destination="hQo-xn-gRO" kind="show" identifier="vcDetails" id="h8h-DV-mva"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -113,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgb-4b-F1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286" y="77"/>
+            <point key="canvasLocation" x="2512" y="77"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="9sq-gE-OFj">
@@ -128,38 +128,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EaX-p1-maa">
-                                <rect key="frame" x="0.0" y="62" width="414" height="674"/>
+                                <rect key="frame" x="0.0" y="308" width="414" height="428"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7c-PC-CZA">
+                                <rect key="frame" x="8" y="236" width="212" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKd-Kh-vhO">
+                                <rect key="frame" x="8" y="279" width="386" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZrQ-gK-B0D">
+                                <rect key="frame" x="228" y="251" width="166" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U6D-xj-qmF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="228"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="cZI-29-0z3"/>
                     <connections>
+                        <outlet property="addressLabel" destination="uKd-Kh-vhO" id="n8u-6x-ch4"/>
                         <outlet property="mapView" destination="EaX-p1-maa" id="lnH-Rf-oet"/>
+                        <outlet property="nameLabel" destination="B7c-PC-CZA" id="Urf-9o-4Bi"/>
+                        <outlet property="ratingImageView" destination="ZrQ-gK-B0D" id="sF6-pm-4gb"/>
+                        <outlet property="thumbImageView" destination="U6D-xj-qmF" id="WkT-e1-VzO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoG-9e-xrx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2757.971014492754" y="357.06521739130437"/>
+            <point key="canvasLocation" x="3361" y="77"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="tW4-Vc-cnf">
+        <scene sceneID="Aks-gX-LfW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gIH-yc-cs9" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S99-IX-nzK" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Pc-Ud-oil">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cUX-rj-jEa">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2xI-yr-O5N" kind="relationship" relationship="rootViewController" id="YkK-sM-81d"/>
+                        <segue destination="2xI-yr-O5N" kind="relationship" relationship="rootViewController" id="cV5-nO-sJ7"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1an-M6-lgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VER-LL-AQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="455" y="155"/>
+            <point key="canvasLocation" x="1720.289855072464" y="76.630434782608702"/>
         </scene>
     </scenes>
 </document>

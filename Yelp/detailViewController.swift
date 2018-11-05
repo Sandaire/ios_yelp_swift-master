@@ -12,12 +12,23 @@ import CoreLocation
 
 class DetailViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
+    @IBOutlet weak var thumbImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var ratingImageView: UIImageView!
+    
     @IBOutlet weak var mapView: MKMapView!
     var business: Business!
     var locationManager : CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameLabel.text = business.name
+        thumbImageView.setImageWith(business.imageURL!)
+        addressLabel.text = business.address
+        ratingImageView.image = business.ratingImage
+        
         
         mapView.delegate = self
         // draw circular overlay centered in San Francisco
